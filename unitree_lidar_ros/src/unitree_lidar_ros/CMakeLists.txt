@@ -59,3 +59,23 @@ set(EXTRA_LIBS
 
 add_executable(unitree_lidar_ros_node src/unitree_lidar_ros_node.cpp)
 target_link_libraries(unitree_lidar_ros_node ${EXTRA_LIBS})
+
+#install(DIRECTORY include/${PROJECT_NAME}/
+#  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#)
+
+
+################################################################################
+# Install
+################################################################################
+install(TARGETS unitree_lidar_ros_node
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+#install(DIRECTORY include/${PROJECT_NAME}/
+#  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#)
+
+install(DIRECTORY launch rviz config
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
