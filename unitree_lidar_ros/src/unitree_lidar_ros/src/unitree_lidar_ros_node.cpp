@@ -11,16 +11,16 @@ int main(int argc, char **argv)
   // ROS
   ros::init(argc, argv, "unitree_lidar");
   ros::NodeHandle nh;
-  
+
   UnitreeLidarSDKNode node(nh);
   // ros::Rate rate(2000);
-  
+
   while (nh.ok())
   {
     ros::spinOnce();
     node.run();
     // rate.sleep();
   }
-
+  node.~UnitreeLidarSDKNode();
   return 0;
 }

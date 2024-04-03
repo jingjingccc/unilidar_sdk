@@ -6,7 +6,7 @@
 initialize_type: 1 # 1-Serial, 2-UDP
 
 # Serial Port
-port: "/dev/ttyUSB0"          # default: "/dev/ttyUSB0"
+port: "/dev/unilidar"          # default: "/dev/ttyUSB0"
 
 # UDP Port
 lidar_port: 6101
